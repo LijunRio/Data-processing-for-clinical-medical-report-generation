@@ -109,8 +109,8 @@ def csv_to_json(file, output):
     val = []
     length = len(data)
     train_data = data[:int(length * 0.7)]
-    test_data = data[int(length * 0.7):int(length * 0.8)]
-    val_data = data[int(length * 0.8):]
+    val_data = data[int(length * 0.7):int(length * 0.8)]
+    test_data = data[int(length * 0.8):]
     dataset = [train_data, test_data, val_data]
     dataset_list = [train, test, val]
     split_list = ['train', 'test', 'val']
@@ -180,9 +180,9 @@ newLiverPath = 'D:/RIO/All_Datastes/整理好的超声数据集/Liver_images'
 step 5: Process report text, remove redundant numbers and special symbols
         find corresponding image and aid path
 """
-ThyroidRawCsv = 'D:/RIO/All_Datastes/整理好的超声数据集/Thyroid_rawXML.csv'
-MammaryRawCsv = 'D:/RIO/All_Datastes/整理好的超声数据集/Mammary_rawXML.csv'
-LiverRawCsv = 'D:/RIO/All_Datastes/整理好的超声数据集/Liver_rawXML.csv'
+ThyroidRawCsv = 'D:/RIO/All_Datastes/整理好的超声数据集/Ultrasonic_datasets/Throid_dataset/Thyroid_rawXML.csv'
+MammaryRawCsv = 'D:/RIO/All_Datastes/整理好的超声数据集/Ultrasonic_datasets/Mammary_dataset/Mammary_rawXML.csv'
+LiverRawCsv = 'D:/RIO/All_Datastes/整理好的超声数据集/Ultrasonic_datasets/Liver_dataset/Liver_rawXML.csv'
 # CleanReport_AddImages(ThyroidRawCsv, newThyroidPath, 'Thyroid')
 # CleanReport_AddImages(MammaryRawCsv, newMammaryPath, 'Mammary')
 # CleanReport_AddImages(LiverRawCsv, newLiverPath, 'Liver')
@@ -195,6 +195,6 @@ step 5: manually delete the samples that are too long
 """
 step 6: csv to json
 """
-# csv_to_json(ThyroidRawCsv, 'D:/RIO/All_Datastes/整理好的超声数据集/Thyroid')
-# csv_to_json(MammaryRawCsv, 'D:/RIO/All_Datastes/整理好的超声数据集/Mammary')
-# csv_to_json(LiverRawCsv, 'D:/RIO/All_Datastes/整理好的超声数据集/Liver')
+# csv_to_json(ThyroidRawCsv, 'D:/RIO/All_Datastes/整理好的超声数据集/Ultrasonic_datasets/Throid_dataset')
+# csv_to_json(MammaryRawCsv, 'D:/RIO/All_Datastes/整理好的超声数据集/Ultrasonic_datasets/Mammary_dataset')
+# csv_to_json(LiverRawCsv, 'D:/RIO/All_Datastes/整理好的超声数据集/Ultrasonic_datasets/Liver_dataset')
